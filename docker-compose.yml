@@ -69,12 +69,12 @@ services:
     image: redis:latest
     container_name: redis
     restart: always
-    env_file:
-      - .env
     volumes:
       - ${PERSISTENT}/redis:/data'
     ports:
       - '6379:6379'
+    environment:
+      REDIS_DB_PASSWORD: "${REDIS_DB_PASSWORD}"
 
 
 volumes:
