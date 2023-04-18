@@ -70,7 +70,7 @@ services:
     container_name: redis
     restart: always
     volumes:
-      - ${PERSISTENT}/redis:/data'
+      - ${PERSISTENT}/redis:/data
     ports:
       - '6379:6379'
     environment:
